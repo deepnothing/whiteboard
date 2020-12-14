@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="" />
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+
+
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <title>Whiteboard</title>
+</head>
+
+<body>
+  <script>
+    // function letsGo() {
+
+    //   // Update this block with your publish/subscribe keys
+    //   pubnub = new PubNub({
+    //     publishKey: "pub-c-ca5e94e4-fcc4-458e-986d-ce73de6bf1f3",
+    //     subscribeKey: "sub-c-b63ff6ae-3d85-11eb-8aa9-b69578166507",
+    //     uuid: "myUniqueUUID"
+    //   })
+
+    //   function publishSampleMessage() {
+    //     console.log("Publish to a channel 'hello_world'");
+    //     // With the right payload, you can publish a message, add a reaction to a message, 
+    //     // send a push notification, or send a small payload called a signal.
+    //     var publishPayload = {
+    //       channel: "hello_world",
+    //       message: {
+    //         title: "greeting",
+    //         description: "This is my first message!"
+    //       }
+    //     }
+    //     pubnub.publish(publishPayload, function (status, response) {
+    //       console.log(status, response);
+    //     })
+    //   }
+
+    //   pubnub.addListener({
+    //     status: function (statusEvent) {
+    //       if (statusEvent.category === "PNConnectedCategory") {
+    //         publishSampleMessage();
+    //       }
+    //     },
+    //     message: function (msg) {
+    //       console.log(msg.message.title);
+    //       console.log(msg.message.description);
+    //     },
+    //     presence: function (presenceEvent) {
+    //       // This is where you handle presence. Not important for now :)
+    //     }
+    //   })
+
+    //   console.log("Subscribing...");
+
+    //   pubnub.subscribe({
+    //     channels: ['hello_world']
+    //   });
+    // };
+
+  </script>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+
+</body>
+
+</html>
