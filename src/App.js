@@ -8,11 +8,9 @@ const pubnub = new PubNub({
   subscribeKey: 'sub-c-b63ff6ae-3d85-11eb-8aa9-b69578166507',
 });
 
-
 pubnub.subscribe({
   channels: ['hello_world']
 });
-
 
 class App extends Component {
 
@@ -26,12 +24,8 @@ class App extends Component {
       lazyRadius: 0,
 
       coordinates: ''
-
     }
-
   };
-
-
 
   componentDidMount = () => {
 
@@ -39,12 +33,9 @@ class App extends Component {
 
       message: MessageEvent => {
 
-
         this.setState({ coordinates: MessageEvent.message })
-
-      }
-    },
-
+        }
+      },
     )
   };
 
@@ -89,26 +80,18 @@ class App extends Component {
 
   clearData = () => {
 
-    this.saveableCanvas.clear()
-    //////////////////////////////////////////////////////
+    this.saveableCanvas.clear()  
 
     pubnub.publish({
       message: this.saveableCanvas.getSaveData(),
       channel: 'hello_world'
     })
-
-
   }
-
 
   render() {
 
     return (
       <div>
-
-
-
-
         <div className="maincontainer" >
           <div className="colorwrapper">
             <div id="spacing"></div>
@@ -155,24 +138,16 @@ class App extends Component {
                 onClick={this.logData}>
                 Log Canvas Coordinates
                 </div>
-
-
-
-
             </div>
-
           </div>
 
           <div id="spacing"></div>
-
 
           <div className="framecontainer">
             <h1 style={{ marginBottom: '0px' }}>MULTI-USER WHITEBOARD</h1>
             <p style={{ margin: '0px' }}>Start by opening in another device or tab to collaborate</p>
 
-
             <div id="drawCanvas" className="frame" onMouseUp={this.sendData}>
-
 
               <CanvasDraw
                 hideGrid
@@ -187,15 +162,9 @@ class App extends Component {
                 immediateLoading={true}
 
               />
-
             </div>
-
           </div>
-
-
         </div>
-
-
       </div >
     )
 
